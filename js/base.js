@@ -7,16 +7,6 @@ function printf(text){
 	document.getElementById("msg").innerHTML+=("</br>\t"+text);
 }
 
-document.getElementById("run").onkeypress=function(e){
-	if(e.keyCode == 13){
-		  command = document.getElementById("run").innerHTML;
-		  document.getElementById("run").innerHTML = '';
-		  document.getElementById("msg").innerHTML += ("<br>[usr@acmic.top ~] # " + command);
-		  cstr = command.split(' ');
-		  run(cstr);
-	}
-}
-
 function run(cmd){
 	switch(cmd[0]){
 		case "hi":
@@ -36,18 +26,19 @@ function run(cmd){
 		case "print":
 		cmdprint(cmd[1],cmd[2]);
 		break;
-		
-		
-		
-		
-		
-		
-	//	printf("Hi~")
-	//	break;
-
 
 		default:
 		document.getElementById("msg").innerHTML+=("<br>-bash: "+cmd[0]+": command not found");
 		break;
+	}
+}
+
+document.getElementById("run").onkeypress=function(e){
+	if(e.keyCode == 13){
+		  command = document.getElementById("run").innerHTML;
+		  document.getElementById("run").innerHTML = '';
+		  document.getElementById("msg").innerHTML += ("<br>[usr@acmic.top ~] # " + command);
+		  cstr = command.split(' ');
+		  run(cstr);
 	}
 }
