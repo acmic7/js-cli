@@ -1,0 +1,13 @@
+*{
+	background-color: black;
+	color: limegreen;
+	font-family: Cutive Mono,Courier New,Consolas,monospace!important;
+	cursor: text;
+}
+.info{
+	color: darkgray;
+}
+.line{
+	float: left;
+	display: inline-block;
+}
