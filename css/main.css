@@ -11,3 +11,22 @@
 	float: left;
 	display: inline-block;
 }
+
+
+/*标签颜色*/
+.blue{
+	color: skyblue;
+	padding-right: 30px;
+}
+.white{
+	color: white;
+	padding-right: 30px;
+}
+.green{
+	color: lime;
+	padding-right: 30px;
+}
+.red{
+	color: red;
+	padding-right: 30px;
+}

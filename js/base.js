@@ -23,6 +23,30 @@ function run(cmd){
 		//document.getElementById("msg").innerHTML='-&gt;whq os 0.1.0';
 		break;
 		
+		case "ls":
+		printf("<span class='blue'>blog</span><span class='blue'>contact</span><span class='white'>hello.txt</span><span class='green'>home</span>");
+		break;
+		
+		case "cd":
+		switch(cmd[1]){
+			case "blog":
+				document.getElementById("msg").innerHTML += ("<br>[usr@acmic.top blog] # " );
+				break;
+		}
+		break;
+		
+		case "vi":
+		switch(cmd[1]){
+			case "hello.txt":
+				document.getElementById("msg").innerHTML += ("<br>ooo!my friend !~welcome back~~~" );
+				break;
+		}
+		break;
+		
+		case "./home":
+			document.getElementById("msg").innerHTML += ("<br><a href='https://acmic.top'>acmic.top</a>" );
+		break;
+		
 		case "print":
 		cmdprint(cmd[1],cmd[2]);
 		break;
